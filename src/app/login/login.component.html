@@ -1,0 +1,34 @@
+<section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>LOGIN</h1>
+                    <h6>YOU CAN LOGIN HERE!!!</h6>
+                </div>
+                <form>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="form-group">
+                          <label>EMAIL ADDRESS</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <br>
+                          <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*EMAIL ADDRESS IS REQUIRED!!</span>
+                        </div>
+                        <div class="form-group">
+                          <label>PASSWORD</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          <br>
+                          <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*PASSWORD IS REQUIRED!!</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-1" [disabled]="!loginForm.valid">LOGIN</button>
+                      </form>
+                      <a style="color:darkblue;margin-top: 20px" routerLink="/signup">NEW USER???CLICK HERE TO SIGN UP!!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>

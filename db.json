@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "flightname": "JET AIRWAYS",
+      "fromcity": "BANGALORE",
+      "tocity": "DELHI",
+      "date": "2021-11-28",
+      "airportname": "KEMPEGOWDA INTERNATIONAL AIRPORT"
+    },
+    {
+      "id": "2",
+      "flightname": "INDIGO",
+      "fromcity": "PUNE",
+      "tocity": "CHENNAI",
+      "date": "2021-12-02",
+      "airportname": "CHENNAI INTERNATIONAL AIRPORT"
+    },
+    {
+      "id": "3",
+      "flightname": "GO FIRST",
+      "fromcity": "CHENNAI",
+      "tocity": "MUMBAI",
+      "date": "2021-12-03",
+      "airportname": "CHENNAI INTERNATIONAL AIRPORT"
+    }
+  ],
+  "signupUsers": [
+    {
+      "name": "PAVITHRA UMESH",
+      "mobile": "7894567890",
+      "email": "pavi@gmail.com",
+      "password": "pavi123",
+      "id": 1
+    },
+    {
+      "name": "GURU PRASAD",
+      "mobile": "7794561230",
+      "email": "guru@gmail.com",
+      "password": "guru123",
+      "id": 2
+    },
+    {
+      "name": "Naveen Kumar",
+      "mobile": "9517538523",
+      "email": "navi",
+      "password": "navi123",
+      "id": 3
+    },
+    {
+      "name": "PRIYA",
+      "mobile": "9638527415",
+      "email": "priya@gmail.com",
+      "password": "pariya123",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

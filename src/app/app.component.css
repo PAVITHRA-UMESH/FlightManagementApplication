@@ -1,0 +1,23 @@
+.header{
+    height:100px;
+    background-color: black;
+}
+
+h2{
+    color:orange;
+    text-shadow: 2px 2px 8px seagreen;
+    text-align: center;
+}
+
+a{
+    color: skyblue;
+    font-size: 20px;
+    padding-left: 50px;
+    position: relative;
+    left:548px;
+
+}
+
+a:hover{
+    color: tomato;
+}

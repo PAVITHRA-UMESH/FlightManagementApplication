@@ -1,0 +1,14 @@
+<section class=header>
+    <h2>FLIGHT MANAGEMENT</h2>
+    <a [routerLink]="['home']" [routerLinkActive]="['activeLink']">HOME</a>
+    <a [routerLink]="['login']" [routerLinkActive]="['activeLink']">LOGIN</a>
+    <a [routerLink]="['flightlist']"[routerLinkActive]="['activeLink']">FLIGHT-LIST</a>
+</section> 
+
+<section [ngClass]="['routeSection']">
+  <router-outlet></router-outlet>
+</section>
+
+<section>
+  <app-footer-component></app-footer-component>
+</section>

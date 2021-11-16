@@ -1,0 +1,19 @@
+section{
+    height: 600px;
+}
+
+h2{
+    position: absolute;
+    top:200px;
+    left:400px;
+    color:darkred;
+    text-shadow: 2px 2px 8px darkblue;
+}
+
+h3{
+    position: absolute;
+    top:250px;
+    left:550px;
+    color:darkblue;
+    text-shadow: 2px 2px 8px darkred;  
+}

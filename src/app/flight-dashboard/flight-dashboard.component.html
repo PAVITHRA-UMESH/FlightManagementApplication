@@ -1,0 +1,80 @@
+<section>
+
+<table class="table table-bordered mt-5">
+    <thead class="table table-dark">
+        <tr>
+            <th scope="col" (click)="Sort('id')">FLIGHT NUMBER</th>
+            <th scope="col" (click)="Sort('flightname')">FLIGHT NAME</th>
+            <th scope="col" (click)="Sort('fromcity')">FROM CITY</th>
+            <th scope="col" (click)="Sort('tocity')">TO CITY</th>
+            <th scope="col" (click)="Sort('date')">DATE</th>
+            <th scope="col" (click)="Sort('airportname')">AIRPORT NAME</th>
+            <th scope="col" colspan="3" (click)="Sort('flightname')">ACTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of flightData  | orderBy : orderHeader : isDescOrder">
+            <td>{{row.id}}</td>
+            <td>{{row.flightname}}</td>
+            <td>{{row.fromcity}}</td>
+            <td>{{row.tocity}}</td>
+            <td>{{row.date}}</td>
+            <td>{{row.airportname}}</td>
+            <td>
+                <button (click)="clickAddFlight()" type="button" class="btn btn-success mx-3" data-toggle="modal" data-target="#exampleModal">ADD</button>
+                <button (click)="onEdit(row)" type="button" class="btn btn-info mx-3" data-toggle="modal" data-target="#exampleModal">EDIT</button>
+                <button (click)="deleteFlight(row)" class="btn btn-danger mx-3">DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">FLIGHT DETAILS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="form-group">
+                  <label>FLIGHT NUMBER</label>
+                  <input type="text" class="form-control" id="id" formControlName="id">
+                </div>
+                <div class="form-group">
+                  <label>FLIGHT NAME</label>
+                  <input type="text" class="form-control" id="flightname" formControlName="flightname">
+                </div>
+                <div class="form-group">
+                    <label>FROM CITY</label>
+                    <input type="text" class="form-control" id="fromcity" formControlName="fromcity">
+                  </div>
+                  <div class="form-group">
+                    <label>TO CITY</label>
+                    <input type="text" class="form-control" id="tocity" formControlName="tocity">
+                  </div>
+                  <div class="form-group">
+                    <label>DATE</label>
+                    <input type="date" class="form-control" id="date" id="airportname" formControlName="date">
+                  </div>
+                  <div class="form-group">
+                    <label>AIRPORT NAME</label>
+                    <input type="text" class="form-control" id="airportname" formControlName="airportname">
+                  </div>
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          <button type="button" *ngIf="showAdd" (click)="postFlightDetails()" class="btn btn-primary">ADD</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateFlightDetails()" class="btn btn-primary">UPDATE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
