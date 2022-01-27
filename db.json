@@ -2,14 +2,6 @@
   "posts": [
     {
       "id": "1",
-      "flightname": "JET AIRWAYS",
-      "fromcity": "BANGALORE",
-      "tocity": "DELHI",
-      "date": "2021-11-28",
-      "airportname": "KEMPEGOWDA INTERNATIONAL AIRPORT"
-    },
-    {
-      "id": "2",
       "flightname": "INDIGO",
       "fromcity": "PUNE",
       "tocity": "CHENNAI",
@@ -17,7 +9,7 @@
       "airportname": "CHENNAI INTERNATIONAL AIRPORT"
     },
     {
-      "id": "3",
+      "id": "2",
       "flightname": "GO FIRST",
       "fromcity": "CHENNAI",
       "tocity": "MUMBAI",
